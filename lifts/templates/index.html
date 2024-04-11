@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        {% comment %} justify-content: center; {% endcomment %}
+        align-items: center;
+        flex-direction: column;
+      "
+    >
+      <div>
+        <h1>Enter The Details</h1>
+      </div>
+      <div>
+        <form action="/lifts//Compute" method="POST">
+          <div
+            style="
+          display: flex;
+          height: 100vh;
+          width: 100vw;
+          {% comment %} justify-content: center; {% endcomment %}
+          align-items: center;
+          flex-direction: column;
+          gap:3rem;
+        "
+          >
+            <div>
+              <label htmlFor="Start">Start Floor :</label>
+              {% csrf_token %}
+              <input
+                type="number"
+                id="Start"
+                placeholder="Start"
+                name="Trigger1"
+              />
+            </div>
+            <div>
+              <label htmlFor="Destination">Destination Floor :</label>
+
+              <input
+                type="number"
+                id="Destination"
+                name="Trigger2"
+                placeholder="Destination"
+              />
+            </div>
+            <div>
+              <button
+                type="submit"
+                style="
+                  background-color: lightblue;
+                  padding: 1.3rem;
+                  border-radius: 30px;
+                  cursor: pointer;
+                "
+              >
+                SUBMIT
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>
